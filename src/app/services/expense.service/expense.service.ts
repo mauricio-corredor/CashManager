@@ -30,6 +30,23 @@ export class ExpenseService {
     });
   }
 
+
+  public getExpensesAtMonth1(
+    startIntervalDate: Date,
+    endIntervalDate: Date
+  ): Observable<Expense[]> {
+    return this.http.get<Expense[]>(`${environment.backend_url}/expense/`, {
+      headers: {
+        Authorization: authorizationBearer(),
+        'Content-type': 'application/json'
+      },
+      params: {
+        startIntervalDate: format(startIntervalDate, this.dateFormat),
+        endIntervalDate: format(endIntervalDate, this.dateFormat)
+      }
+    });
+  }
+
   public getTotalExpensesByMonth(): Observable<ITotalExpenseByMonth[]> {
     return this.http.get<ITotalExpenseByMonth[]>(
       `${environment.backend_url}/expense/getTotalExpensesByMonth`,
