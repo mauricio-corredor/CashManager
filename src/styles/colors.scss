@@ -1,1 +1,28 @@
 $cash-manager-background-color: #4e4945;
+@keyframes progress-linear-short-ltr {
+
+  0% {
+
+    eft: -200%;
+
+    right: 100%;
+
+  }
+
+  60% {
+
+    left: 107%;
+
+    right: -8%;
+
+  }
+
+  100% {
+
+    left: 107%;
+
+    right: -8%;
+
+  }
+
+}
