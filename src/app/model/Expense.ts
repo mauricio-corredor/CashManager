@@ -21,6 +21,10 @@ export class Expense {
     return this._id;
   }
 
+  public get id1(): number {
+
+  }
+
   /**
    * Getter amount
    * @return {number }
