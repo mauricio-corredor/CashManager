@@ -22,7 +22,7 @@ export class Expense {
   }
 
   public get id1(): number {
-
+  return 5;
   }
 
   /**
