@@ -24,8 +24,7 @@ export class LoginComponent {
   ) {}
 
   public handleLogin() {
-    let inputUsrNme ='';
-    if (inputUsrNme = this.inputUsername && this.inputPassword) {
+    if (this.inputUsername && this.inputPassword) {
       this.isLoading = true;
       this.authService.login(this.inputUsername, this.inputPassword).subscribe({
         next: () => {
