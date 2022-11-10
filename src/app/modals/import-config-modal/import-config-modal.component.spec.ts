@@ -27,7 +27,8 @@ describe('ImportConfigModalComponent', () => {
 
   beforeEach(() => {
     spectator = createComponent();
-    configService = createHttp();
+    createHttp();
+
   });
 
   it('Should create the component', () => {
