@@ -42,17 +42,6 @@ export class ExpenseService {
     );
   }
 
-  public getTotalExpensesByMonth1(): Observable<ITotalExpenseByMonth[]> {
-    return this.http.get<ITotalExpenseByMonth[]>(
-      `${environment.backend_url}/expense/getTotalExpensesByMonth`,
-      {
-        headers: {
-          Authorization: authorizationBearer(),
-          'Content-type': 'application/json'
-        }
-      }
-    );
-  }
 
   public getTotalExpensesByMonthByLabelId(
     labelId: number
