@@ -68,19 +68,7 @@ export class ExpenseService {
     );
   }
 
-  public getTotalExpensesByMonthByLabelId1(
-    labelId: number
-  ): Observable<ITotalExpenseByMonth[]> {
-    return this.http.get<ITotalExpenseByMonth[]>(
-      `${environment.backend_url}/expense/getTotalExpensesByMonthByLabelId?labelId=${labelId}`,
-      {
-        headers: {
-          Authorization: authorizationBearer(),
-          'Content-type': 'application/json'
-        }
-      }
-    );
-  }
+
 
   public addExpense(expense: InsertExpensePayload): Observable<Expense> {
     return this.http.post<Expense>(
