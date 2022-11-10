@@ -12,7 +12,7 @@ import { ImportConfigModalComponent } from './import-config-modal.component';
 
 describe('ImportConfigModalComponent', () => {
   let spectator: Spectator<ImportConfigModalComponent>;
-  let configService: SpectatorHttp<ConfigService>;
+
 
   const createComponent = createComponentFactory({
     component: ImportConfigModalComponent,
@@ -28,7 +28,6 @@ describe('ImportConfigModalComponent', () => {
   beforeEach(() => {
     spectator = createComponent();
     createHttp();
-
   });
 
   it('Should create the component', () => {
